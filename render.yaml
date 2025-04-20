@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: your-app-name  # ← Change to your app’s name (no spaces)
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"

@@ -1,0 +1,50 @@
+print("⚡ SYSTEM ONLINE ⚡")  
+python app.py
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Flask App</title>
+    <!-- Load Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Hello, Architect! 👷</h1>
+    <button onclick="showFancyAlert()">Click Me</button>
+
+    <!-- Chart Container (Fixed) -->
+    <div style="width: 80%; margin: 20px auto;">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+        // Button Alert Function
+        function showFancyAlert() {
+            alert("✔ You clicked! Next: Let's add more features!");
+        }
+
+        // Initialize Chart (Fixed Syntax)
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('myChart');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Python', 'Flask', 'HTML', 'Fun'],
+                    datasets: [{
+                        label: 'Your Skills',
+                        data: [90, 70, 60, 100],
+                        backgroundColor: [
+                            '#FF6384',  // Pink
+                            '#36A2EB',  // Blue
+                            '#FFCE56',  // Yellow
+                            '#4BC0C0'   // Teal
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true
+                }
+            });
+        });
+    </script>
+</body>
+</html>
